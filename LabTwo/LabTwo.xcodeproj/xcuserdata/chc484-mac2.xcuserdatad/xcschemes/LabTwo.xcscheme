@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B67DE0EB18A2F55400570519"
-               BuildableName = "PlayRollingStones.app"
-               BlueprintName = "PlayRollingStones"
-               ReferencedContainer = "container:PlayRollingStones.xcodeproj">
+               BlueprintIdentifier = "5E6772B61A8FB98700C80A3F"
+               BuildableName = "LabTwo.app"
+               BlueprintName = "LabTwo"
+               ReferencedContainer = "container:LabTwo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B67DE10C18A2F55400570519"
-               BuildableName = "PlayRollingStonesTests.xctest"
-               BlueprintName = "PlayRollingStonesTests"
-               ReferencedContainer = "container:PlayRollingStones.xcodeproj">
+               BlueprintIdentifier = "5E6772CF1A8FB98700C80A3F"
+               BuildableName = "LabTwoTests.xctest"
+               BlueprintName = "LabTwoTests"
+               ReferencedContainer = "container:LabTwo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B67DE10C18A2F55400570519"
-               BuildableName = "PlayRollingStonesTests.xctest"
-               BlueprintName = "PlayRollingStonesTests"
-               ReferencedContainer = "container:PlayRollingStones.xcodeproj">
+               BlueprintIdentifier = "5E6772CF1A8FB98700C80A3F"
+               BuildableName = "LabTwoTests.xctest"
+               BlueprintName = "LabTwoTests"
+               ReferencedContainer = "container:LabTwo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B67DE0EB18A2F55400570519"
-            BuildableName = "PlayRollingStones.app"
-            BlueprintName = "PlayRollingStones"
-            ReferencedContainer = "container:PlayRollingStones.xcodeproj">
+            BlueprintIdentifier = "5E6772B61A8FB98700C80A3F"
+            BuildableName = "LabTwo.app"
+            BlueprintName = "LabTwo"
+            ReferencedContainer = "container:LabTwo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B67DE0EB18A2F55400570519"
-            BuildableName = "PlayRollingStones.app"
-            BlueprintName = "PlayRollingStones"
-            ReferencedContainer = "container:PlayRollingStones.xcodeproj">
+            BlueprintIdentifier = "5E6772B61A8FB98700C80A3F"
+            BuildableName = "LabTwo.app"
+            BlueprintName = "LabTwo"
+            ReferencedContainer = "container:LabTwo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B67DE0EB18A2F55400570519"
-            BuildableName = "PlayRollingStones.app"
-            BlueprintName = "PlayRollingStones"
-            ReferencedContainer = "container:PlayRollingStones.xcodeproj">
+            BlueprintIdentifier = "5E6772B61A8FB98700C80A3F"
+            BuildableName = "LabTwo.app"
+            BlueprintName = "LabTwo"
+            ReferencedContainer = "container:LabTwo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
