@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B65EC5EC18A983270033BE93 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65EC5EB18A983270033BE93 /* GLKit.framework */; };
+		B67DE0F018A2F55400570519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0EF18A2F55400570519 /* Foundation.framework */; };
+		B67DE0F218A2F55400570519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0F118A2F55400570519 /* CoreGraphics.framework */; };
+		B67DE0F418A2F55400570519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0F318A2F55400570519 /* UIKit.framework */; };
+		B67DE0FA18A2F55400570519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B67DE0F818A2F55400570519 /* InfoPlist.strings */; };
+		B67DE0FC18A2F55400570519 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B67DE0FB18A2F55400570519 /* main.m */; };
+		B67DE10018A2F55400570519 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B67DE0FF18A2F55400570519 /* AppDelegate.m */; };
+		B67DE10318A2F55400570519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67DE10118A2F55400570519 /* Main.storyboard */; };
+		B67DE10618A2F55400570519 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B67DE10518A2F55400570519 /* ViewController.mm */; };
+		B67DE10818A2F55400570519 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67DE10718A2F55400570519 /* Images.xcassets */; };
+		B67DE10F18A2F55400570519 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE10E18A2F55400570519 /* XCTest.framework */; };
+		B67DE11018A2F55400570519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0EF18A2F55400570519 /* Foundation.framework */; };
+		B67DE11118A2F55400570519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0F318A2F55400570519 /* UIKit.framework */; };
+		B67DE11918A2F55400570519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B67DE11718A2F55400570519 /* InfoPlist.strings */; };
+		B67DE11B18A2F55400570519 /* PlayRollingStonesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B67DE11A18A2F55400570519 /* PlayRollingStonesTests.m */; };
+		B67DE12C18A2F58500570519 /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = B67DE12518A2F58500570519 /* AudioFileReader.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B67DE12D18A2F58500570519 /* AudioFileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B67DE12718A2F58500570519 /* AudioFileWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B67DE12E18A2F58500570519 /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = B67DE12918A2F58500570519 /* Novocaine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B67DE12F18A2F58500570519 /* RingBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = B67DE12B18A2F58500570519 /* RingBuffer.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B67DE13218A2F69A00570519 /* satisfaction.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B67DE13118A2F69A00570519 /* satisfaction.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B67DE11218A2F55400570519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B67DE0E418A2F55400570519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B67DE0EB18A2F55400570519;
+			remoteInfo = PlayRollingStones;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B65EC5EA18A981A00033BE93 /* SMUGraphHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUGraphHelper.h; sourceTree = "<group>"; };
+		B65EC5EB18A983270033BE93 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		B65EC5ED18A992F10033BE93 /* SMUFFTHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUFFTHelper.h; sourceTree = "<group>"; };
+		B67DE0EC18A2F55400570519 /* PlayRollingStones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayRollingStones.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67DE0EF18A2F55400570519 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B67DE0F118A2F55400570519 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B67DE0F318A2F55400570519 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B67DE0F718A2F55400570519 /* PlayRollingStones-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlayRollingStones-Info.plist"; sourceTree = "<group>"; };
+		B67DE0F918A2F55400570519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B67DE0FB18A2F55400570519 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B67DE0FD18A2F55400570519 /* PlayRollingStones-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayRollingStones-Prefix.pch"; sourceTree = "<group>"; };
+		B67DE0FE18A2F55400570519 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B67DE0FF18A2F55400570519 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B67DE10218A2F55400570519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B67DE10418A2F55400570519 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B67DE10518A2F55400570519 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		B67DE10718A2F55400570519 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B67DE10D18A2F55400570519 /* PlayRollingStonesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayRollingStonesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67DE10E18A2F55400570519 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B67DE11618A2F55400570519 /* PlayRollingStonesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlayRollingStonesTests-Info.plist"; sourceTree = "<group>"; };
+		B67DE11818A2F55400570519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B67DE11A18A2F55400570519 /* PlayRollingStonesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayRollingStonesTests.m; sourceTree = "<group>"; };
+		B67DE12418A2F58500570519 /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
+		B67DE12518A2F58500570519 /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
+		B67DE12618A2F58500570519 /* AudioFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileWriter.h; sourceTree = "<group>"; };
+		B67DE12718A2F58500570519 /* AudioFileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileWriter.m; sourceTree = "<group>"; };
+		B67DE12818A2F58500570519 /* Novocaine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Novocaine.h; sourceTree = "<group>"; };
+		B67DE12918A2F58500570519 /* Novocaine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Novocaine.m; sourceTree = "<group>"; };
+		B67DE12A18A2F58500570519 /* RingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingBuffer.h; sourceTree = "<group>"; };
+		B67DE12B18A2F58500570519 /* RingBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RingBuffer.mm; sourceTree = "<group>"; };
+		B67DE13118A2F69A00570519 /* satisfaction.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = satisfaction.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B67DE0E918A2F55400570519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B65EC5EC18A983270033BE93 /* GLKit.framework in Frameworks */,
+				B67DE0F218A2F55400570519 /* CoreGraphics.framework in Frameworks */,
+				B67DE0F418A2F55400570519 /* UIKit.framework in Frameworks */,
+				B67DE0F018A2F55400570519 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67DE10A18A2F55400570519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67DE10F18A2F55400570519 /* XCTest.framework in Frameworks */,
+				B67DE11118A2F55400570519 /* UIKit.framework in Frameworks */,
+				B67DE11018A2F55400570519 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B67DE0E318A2F55400570519 = {
+			isa = PBXGroup;
+			children = (
+				B67DE13018A2F58F00570519 /* Novocaine */,
+				B67DE0F518A2F55400570519 /* PlayRollingStones */,
+				B67DE11418A2F55400570519 /* PlayRollingStonesTests */,
+				B67DE0EE18A2F55400570519 /* Frameworks */,
+				B67DE0ED18A2F55400570519 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B67DE0ED18A2F55400570519 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B67DE0EC18A2F55400570519 /* PlayRollingStones.app */,
+				B67DE10D18A2F55400570519 /* PlayRollingStonesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B67DE0EE18A2F55400570519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B65EC5EB18A983270033BE93 /* GLKit.framework */,
+				B67DE0EF18A2F55400570519 /* Foundation.framework */,
+				B67DE0F118A2F55400570519 /* CoreGraphics.framework */,
+				B67DE0F318A2F55400570519 /* UIKit.framework */,
+				B67DE10E18A2F55400570519 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B67DE0F518A2F55400570519 /* PlayRollingStones */ = {
+			isa = PBXGroup;
+			children = (
+				B67DE0FE18A2F55400570519 /* AppDelegate.h */,
+				B67DE0FF18A2F55400570519 /* AppDelegate.m */,
+				B67DE10118A2F55400570519 /* Main.storyboard */,
+				B67DE10418A2F55400570519 /* ViewController.h */,
+				B67DE10518A2F55400570519 /* ViewController.mm */,
+				B65EC5EA18A981A00033BE93 /* SMUGraphHelper.h */,
+				B65EC5ED18A992F10033BE93 /* SMUFFTHelper.h */,
+				B67DE10718A2F55400570519 /* Images.xcassets */,
+				B67DE0F618A2F55400570519 /* Supporting Files */,
+			);
+			path = PlayRollingStones;
+			sourceTree = "<group>";
+		};
+		B67DE0F618A2F55400570519 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B67DE13118A2F69A00570519 /* satisfaction.mp3 */,
+				B67DE0F718A2F55400570519 /* PlayRollingStones-Info.plist */,
+				B67DE0F818A2F55400570519 /* InfoPlist.strings */,
+				B67DE0FB18A2F55400570519 /* main.m */,
+				B67DE0FD18A2F55400570519 /* PlayRollingStones-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B67DE11418A2F55400570519 /* PlayRollingStonesTests */ = {
+			isa = PBXGroup;
+			children = (
+				B67DE11A18A2F55400570519 /* PlayRollingStonesTests.m */,
+				B67DE11518A2F55400570519 /* Supporting Files */,
+			);
+			path = PlayRollingStonesTests;
+			sourceTree = "<group>";
+		};
+		B67DE11518A2F55400570519 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B67DE11618A2F55400570519 /* PlayRollingStonesTests-Info.plist */,
+				B67DE11718A2F55400570519 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B67DE13018A2F58F00570519 /* Novocaine */ = {
+			isa = PBXGroup;
+			children = (
+				B67DE12418A2F58500570519 /* AudioFileReader.h */,
+				B67DE12518A2F58500570519 /* AudioFileReader.mm */,
+				B67DE12618A2F58500570519 /* AudioFileWriter.h */,
+				B67DE12718A2F58500570519 /* AudioFileWriter.m */,
+				B67DE12818A2F58500570519 /* Novocaine.h */,
+				B67DE12918A2F58500570519 /* Novocaine.m */,
+				B67DE12A18A2F58500570519 /* RingBuffer.h */,
+				B67DE12B18A2F58500570519 /* RingBuffer.mm */,
+			);
+			name = Novocaine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B67DE0EB18A2F55400570519 /* PlayRollingStones */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B67DE11E18A2F55400570519 /* Build configuration list for PBXNativeTarget "PlayRollingStones" */;
+			buildPhases = (
+				B67DE0E818A2F55400570519 /* Sources */,
+				B67DE0E918A2F55400570519 /* Frameworks */,
+				B67DE0EA18A2F55400570519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayRollingStones;
+			productName = PlayRollingStones;
+			productReference = B67DE0EC18A2F55400570519 /* PlayRollingStones.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B67DE10C18A2F55400570519 /* PlayRollingStonesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B67DE12118A2F55400570519 /* Build configuration list for PBXNativeTarget "PlayRollingStonesTests" */;
+			buildPhases = (
+				B67DE10918A2F55400570519 /* Sources */,
+				B67DE10A18A2F55400570519 /* Frameworks */,
+				B67DE10B18A2F55400570519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B67DE11318A2F55400570519 /* PBXTargetDependency */,
+			);
+			name = PlayRollingStonesTests;
+			productName = PlayRollingStonesTests;
+			productReference = B67DE10D18A2F55400570519 /* PlayRollingStonesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B67DE0E418A2F55400570519 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Eric Larson";
+				TargetAttributes = {
+					B67DE10C18A2F55400570519 = {
+						TestTargetID = B67DE0EB18A2F55400570519;
+					};
+				};
+			};
+			buildConfigurationList = B67DE0E718A2F55400570519 /* Build configuration list for PBXProject "PlayRollingStones" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B67DE0E318A2F55400570519;
+			productRefGroup = B67DE0ED18A2F55400570519 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B67DE0EB18A2F55400570519 /* PlayRollingStones */,
+				B67DE10C18A2F55400570519 /* PlayRollingStonesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B67DE0EA18A2F55400570519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67DE10818A2F55400570519 /* Images.xcassets in Resources */,
+				B67DE0FA18A2F55400570519 /* InfoPlist.strings in Resources */,
+				B67DE13218A2F69A00570519 /* satisfaction.mp3 in Resources */,
+				B67DE10318A2F55400570519 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67DE10B18A2F55400570519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67DE11918A2F55400570519 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B67DE0E818A2F55400570519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67DE10618A2F55400570519 /* ViewController.mm in Sources */,
+				B67DE10018A2F55400570519 /* AppDelegate.m in Sources */,
+				B67DE0FC18A2F55400570519 /* main.m in Sources */,
+				B67DE12E18A2F58500570519 /* Novocaine.m in Sources */,
+				B67DE12F18A2F58500570519 /* RingBuffer.mm in Sources */,
+				B67DE12D18A2F58500570519 /* AudioFileWriter.m in Sources */,
+				B67DE12C18A2F58500570519 /* AudioFileReader.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67DE10918A2F55400570519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67DE11B18A2F55400570519 /* PlayRollingStonesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B67DE11318A2F55400570519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B67DE0EB18A2F55400570519 /* PlayRollingStones */;
+			targetProxy = B67DE11218A2F55400570519 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B67DE0F818A2F55400570519 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B67DE0F918A2F55400570519 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B67DE10118A2F55400570519 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B67DE10218A2F55400570519 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B67DE11718A2F55400570519 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B67DE11818A2F55400570519 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B67DE11C18A2F55400570519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B67DE11D18A2F55400570519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B67DE11F18A2F55400570519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayRollingStones/PlayRollingStones-Prefix.pch";
+				INFOPLIST_FILE = "PlayRollingStones/PlayRollingStones-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B67DE12018A2F55400570519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayRollingStones/PlayRollingStones-Prefix.pch";
+				INFOPLIST_FILE = "PlayRollingStones/PlayRollingStones-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B67DE12218A2F55400570519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlayRollingStones.app/PlayRollingStones";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayRollingStones/PlayRollingStones-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PlayRollingStonesTests/PlayRollingStonesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B67DE12318A2F55400570519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlayRollingStones.app/PlayRollingStones";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlayRollingStones/PlayRollingStones-Prefix.pch";
+				INFOPLIST_FILE = "PlayRollingStonesTests/PlayRollingStonesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B67DE0E718A2F55400570519 /* Build configuration list for PBXProject "PlayRollingStones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67DE11C18A2F55400570519 /* Debug */,
+				B67DE11D18A2F55400570519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B67DE11E18A2F55400570519 /* Build configuration list for PBXNativeTarget "PlayRollingStones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67DE11F18A2F55400570519 /* Debug */,
+				B67DE12018A2F55400570519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B67DE12118A2F55400570519 /* Build configuration list for PBXNativeTarget "PlayRollingStonesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67DE12218A2F55400570519 /* Debug */,
+				B67DE12318A2F55400570519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B67DE0E418A2F55400570519 /* Project object */;
+}
