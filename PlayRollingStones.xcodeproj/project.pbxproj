@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9FA70A371A91C47300AC5D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67DE10118A2F55400570519 /* Main.storyboard */; };
-		9FA70A381A91C48300AC5D49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67DE10718A2F55400570519 /* Images.xcassets */; };
-		9FA70A3B1A91C8D100AC5D49 /* ModuleAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.m */; };
-		9FA70A3E1A91CE4000AC5D49 /* ModuleBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.m */; };
+		9FA70A3B1A91C8D100AC5D49 /* ModuleAViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */; };
+		9FA70A3E1A91CE4000AC5D49 /* ModuleBViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.mm */; };
+		9FDFA7121A94264E00B9386F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67DE10718A2F55400570519 /* Images.xcassets */; };
+		9FDFA7151A94280D00B9386F /* AudioDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDFA7141A94280D00B9386F /* AudioDataModel.m */; };
 		B65EC5EC18A983270033BE93 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65EC5EB18A983270033BE93 /* GLKit.framework */; };
 		B67DE0F018A2F55400570519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0EF18A2F55400570519 /* Foundation.framework */; };
 		B67DE0F218A2F55400570519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0F118A2F55400570519 /* CoreGraphics.framework */; };
@@ -43,13 +44,15 @@
 
 /* Begin PBXFileReference section */
 		9FA70A391A91C8D100AC5D49 /* ModuleAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleAViewController.h; sourceTree = "<group>"; };
-		9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleAViewController.m; sourceTree = "<group>"; };
+		9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModuleAViewController.mm; sourceTree = "<group>"; };
 		9FA70A3C1A91CE4000AC5D49 /* ModuleBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleBViewController.h; sourceTree = "<group>"; };
-		9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleBViewController.m; sourceTree = "<group>"; };
+		9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModuleBViewController.mm; sourceTree = "<group>"; };
+		9FDFA7131A94280D00B9386F /* AudioDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDataModel.h; sourceTree = "<group>"; };
+		9FDFA7141A94280D00B9386F /* AudioDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDataModel.m; sourceTree = "<group>"; };
 		B65EC5EA18A981A00033BE93 /* SMUGraphHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUGraphHelper.h; sourceTree = "<group>"; };
 		B65EC5EB18A983270033BE93 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B65EC5ED18A992F10033BE93 /* SMUFFTHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUFFTHelper.h; sourceTree = "<group>"; };
-		B67DE0EC18A2F55400570519 /* AudioLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67DE0EC18A2F55400570519 /* PlayRollingStones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayRollingStones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67DE0EF18A2F55400570519 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B67DE0F118A2F55400570519 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B67DE0F318A2F55400570519 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -108,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B67DE13018A2F58F00570519 /* Novocaine */,
-				B67DE0F518A2F55400570519 /* AudioLab */,
+				B67DE0F518A2F55400570519 /* PlayRollingStones */,
 				B67DE11418A2F55400570519 /* PlayRollingStonesTests */,
 				B67DE0EE18A2F55400570519 /* Frameworks */,
 				B67DE0ED18A2F55400570519 /* Products */,
@@ -118,7 +121,7 @@
 		B67DE0ED18A2F55400570519 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B67DE0EC18A2F55400570519 /* AudioLab.app */,
+				B67DE0EC18A2F55400570519 /* PlayRollingStones.app */,
 				B67DE10D18A2F55400570519 /* PlayRollingStonesTests.xctest */,
 			);
 			name = Products;
@@ -136,16 +139,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B67DE0F518A2F55400570519 /* AudioLab */ = {
+		B67DE0F518A2F55400570519 /* PlayRollingStones */ = {
 			isa = PBXGroup;
 			children = (
 				B67DE0FE18A2F55400570519 /* AppDelegate.h */,
 				B67DE0FF18A2F55400570519 /* AppDelegate.m */,
 				B67DE10118A2F55400570519 /* Main.storyboard */,
 				9FA70A3C1A91CE4000AC5D49 /* ModuleBViewController.h */,
-				9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.m */,
+				9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.mm */,
 				9FA70A391A91C8D100AC5D49 /* ModuleAViewController.h */,
-				9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.m */,
+				9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */,
+				9FDFA7131A94280D00B9386F /* AudioDataModel.h */,
+				9FDFA7141A94280D00B9386F /* AudioDataModel.m */,
 				B67DE10418A2F55400570519 /* ViewController.h */,
 				B67DE10518A2F55400570519 /* ViewController.mm */,
 				B65EC5EA18A981A00033BE93 /* SMUGraphHelper.h */,
@@ -153,7 +158,6 @@
 				B67DE10718A2F55400570519 /* Images.xcassets */,
 				B67DE0F618A2F55400570519 /* Supporting Files */,
 			);
-			name = AudioLab;
 			path = PlayRollingStones;
 			sourceTree = "<group>";
 		};
@@ -219,7 +223,7 @@
 			);
 			name = PlayRollingStones;
 			productName = PlayRollingStones;
-			productReference = B67DE0EC18A2F55400570519 /* AudioLab.app */;
+			productReference = B67DE0EC18A2F55400570519 /* PlayRollingStones.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B67DE10C18A2F55400570519 /* PlayRollingStonesTests */ = {
@@ -254,7 +258,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B67DE0E718A2F55400570519 /* Build configuration list for PBXProject "AudioLab" */;
+			buildConfigurationList = B67DE0E718A2F55400570519 /* Build configuration list for PBXProject "PlayRollingStones" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -278,7 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FA70A381A91C48300AC5D49 /* Images.xcassets in Resources */,
+				9FDFA7121A94264E00B9386F /* Images.xcassets in Resources */,
 				9FA70A371A91C47300AC5D49 /* Main.storyboard in Resources */,
 				B67DE0FA18A2F55400570519 /* InfoPlist.strings in Resources */,
 				B67DE13218A2F69A00570519 /* satisfaction.mp3 in Resources */,
@@ -300,12 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FA70A3B1A91C8D100AC5D49 /* ModuleAViewController.m in Sources */,
-				9FA70A3E1A91CE4000AC5D49 /* ModuleBViewController.m in Sources */,
+				9FA70A3B1A91C8D100AC5D49 /* ModuleAViewController.mm in Sources */,
+				9FA70A3E1A91CE4000AC5D49 /* ModuleBViewController.mm in Sources */,
 				B67DE10618A2F55400570519 /* ViewController.mm in Sources */,
 				B67DE10018A2F55400570519 /* AppDelegate.m in Sources */,
 				B67DE0FC18A2F55400570519 /* main.m in Sources */,
 				B67DE12E18A2F58500570519 /* Novocaine.m in Sources */,
+				9FDFA7151A94280D00B9386F /* AudioDataModel.m in Sources */,
 				B67DE12F18A2F58500570519 /* RingBuffer.mm in Sources */,
 				B67DE12D18A2F58500570519 /* AudioFileWriter.m in Sources */,
 				B67DE12C18A2F58500570519 /* AudioFileReader.mm in Sources */,
@@ -436,7 +441,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayRollingStones/PlayRollingStones-Prefix.pch";
 				INFOPLIST_FILE = "PlayRollingStones/PlayRollingStones-Info.plist";
-				PRODUCT_NAME = AudioLab;
+				PRODUCT_NAME = PlayRollingStones;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -449,7 +454,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlayRollingStones/PlayRollingStones-Prefix.pch";
 				INFOPLIST_FILE = "PlayRollingStones/PlayRollingStones-Info.plist";
-				PRODUCT_NAME = AudioLab;
+				PRODUCT_NAME = PlayRollingStones;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -497,7 +502,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B67DE0E718A2F55400570519 /* Build configuration list for PBXProject "AudioLab" */ = {
+		B67DE0E718A2F55400570519 /* Build configuration list for PBXProject "PlayRollingStones" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B67DE11C18A2F55400570519 /* Debug */,

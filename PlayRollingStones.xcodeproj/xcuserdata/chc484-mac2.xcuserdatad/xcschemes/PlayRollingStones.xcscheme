@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B67DE0EB18A2F55400570519"
                BuildableName = "AudioLab.app"
                BlueprintName = "PlayRollingStones"
-               ReferencedContainer = "container:AudioLab.xcodeproj">
+               ReferencedContainer = "container:PlayRollingStones.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "B67DE10C18A2F55400570519"
                BuildableName = "PlayRollingStonesTests.xctest"
                BlueprintName = "PlayRollingStonesTests"
-               ReferencedContainer = "container:AudioLab.xcodeproj">
+               ReferencedContainer = "container:PlayRollingStones.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "B67DE10C18A2F55400570519"
                BuildableName = "PlayRollingStonesTests.xctest"
                BlueprintName = "PlayRollingStonesTests"
-               ReferencedContainer = "container:AudioLab.xcodeproj">
+               ReferencedContainer = "container:PlayRollingStones.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "B67DE0EB18A2F55400570519"
             BuildableName = "AudioLab.app"
             BlueprintName = "PlayRollingStones"
-            ReferencedContainer = "container:AudioLab.xcodeproj">
+            ReferencedContainer = "container:PlayRollingStones.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "B67DE0EB18A2F55400570519"
             BuildableName = "AudioLab.app"
             BlueprintName = "PlayRollingStones"
-            ReferencedContainer = "container:AudioLab.xcodeproj">
+            ReferencedContainer = "container:PlayRollingStones.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,7 +96,7 @@
             BlueprintIdentifier = "B67DE0EB18A2F55400570519"
             BuildableName = "AudioLab.app"
             BlueprintName = "PlayRollingStones"
-            ReferencedContainer = "container:AudioLab.xcodeproj">
+            ReferencedContainer = "container:PlayRollingStones.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

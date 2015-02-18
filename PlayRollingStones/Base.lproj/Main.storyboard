@@ -37,18 +37,36 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0kHz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFg-OV-XvL">
+                                <rect key="frame" x="44" y="106" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0kHz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klN-sq-q3N">
+                                <rect key="frame" x="235" y="106" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="klN-sq-q3N" firstAttribute="centerX" secondItem="cGO-Xv-TqP" secondAttribute="centerX" constant="-2" id="7EW-v2-gQX"/>
+                            <constraint firstItem="klN-sq-q3N" firstAttribute="top" secondItem="cGO-Xv-TqP" secondAttribute="bottom" constant="8" id="GEe-r7-oU0"/>
+                            <constraint firstItem="vFg-OV-XvL" firstAttribute="top" secondItem="O83-zh-iov" secondAttribute="bottom" constant="8" id="Hbk-fE-jiH"/>
                             <constraint firstAttribute="centerX" secondItem="ocT-V3-2mv" secondAttribute="centerX" id="WHJ-ib-Wzc"/>
                             <constraint firstAttribute="centerX" secondItem="O83-zh-iov" secondAttribute="centerX" constant="96.5" id="Zh1-T3-eRc"/>
                             <constraint firstItem="cGO-Xv-TqP" firstAttribute="leading" secondItem="O83-zh-iov" secondAttribute="trailing" constant="98" id="cFQ-Zy-DNZ"/>
                             <constraint firstItem="O83-zh-iov" firstAttribute="top" secondItem="jZK-DT-YMn" secondAttribute="bottom" constant="13" id="lDC-da-ahZ"/>
+                            <constraint firstItem="vFg-OV-XvL" firstAttribute="centerX" secondItem="O83-zh-iov" secondAttribute="centerX" constant="-2" id="pNU-7S-FTg"/>
                             <constraint firstItem="6vy-HS-dTb" firstAttribute="top" secondItem="ocT-V3-2mv" secondAttribute="bottom" constant="80" id="tX2-t2-gwt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ih2-cj-fGH"/>
                     <connections>
+                        <outlet property="freq1" destination="vFg-OV-XvL" id="iuS-Yq-kj3"/>
+                        <outlet property="freq2" destination="klN-sq-q3N" id="BGU-7Q-x4Z"/>
                         <outlet property="recordButton" destination="ocT-V3-2mv" id="q1g-Fb-uVa"/>
                     </connections>
                 </viewController>
@@ -74,8 +92,14 @@
                                     <action selector="sliderChanged:" destination="T5x-Qm-Pbs" eventType="valueChanged" id="bVs-gJ-Ra1"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 kHZ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoL-KC-mg1">
-                                <rect key="frame" x="137" y="481" width="47" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 kHz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoL-KC-mg1">
+                                <rect key="frame" x="139" y="481" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gesture" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbF-dl-FMn">
+                                <rect key="frame" x="130" y="273" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -84,16 +108,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NC2-kh-ehB" firstAttribute="top" secondItem="Xox-sa-diZ" secondAttribute="bottom" constant="20" id="2SV-kO-fOC"/>
+                            <constraint firstAttribute="centerX" secondItem="VbF-dl-FMn" secondAttribute="centerX" constant="-0.5" id="3eX-2S-pJA"/>
                             <constraint firstItem="Xox-sa-diZ" firstAttribute="top" secondItem="BoL-KC-mg1" secondAttribute="bottom" constant="16" id="Ls8-xA-4R3"/>
                             <constraint firstAttribute="centerX" secondItem="Xox-sa-diZ" secondAttribute="centerX" id="Mrg-Ag-spC"/>
                             <constraint firstItem="Xox-sa-diZ" firstAttribute="trailing" secondItem="t5E-B5-bAf" secondAttribute="trailingMargin" id="Q8o-hP-3kU"/>
                             <constraint firstItem="Xox-sa-diZ" firstAttribute="leading" secondItem="t5E-B5-bAf" secondAttribute="leadingMargin" id="QNw-0O-oZo"/>
+                            <constraint firstAttribute="centerY" secondItem="VbF-dl-FMn" secondAttribute="centerY" constant="0.5" id="iSr-nF-NE0"/>
                             <constraint firstAttribute="centerX" secondItem="BoL-KC-mg1" secondAttribute="centerX" id="mMK-m3-ThP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c4F-fx-Rlr"/>
                     <connections>
                         <outlet property="frequency" destination="BoL-KC-mg1" id="QIz-gy-EU4"/>
+                        <outlet property="gesture" destination="VbF-dl-FMn" id="zcf-9y-qHq"/>
                         <outlet property="slider" destination="Xox-sa-diZ" id="DxC-e3-suX"/>
                     </connections>
                 </viewController>
