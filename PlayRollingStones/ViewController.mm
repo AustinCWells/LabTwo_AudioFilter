@@ -50,7 +50,6 @@ RingBuffer *ringBuffer;
     
     self.graphHelper->SetBounds(-0.9,0.9,-0.9,0.9); // bottom, top, left, right, full screen==(-1,1,-1,1)
     
-
 }
 
 -(void) viewWillDisappear:(BOOL)animated{

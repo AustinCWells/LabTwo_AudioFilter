@@ -11,7 +11,6 @@
 		9FA70A3B1A91C8D100AC5D49 /* ModuleAViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */; };
 		9FA70A3E1A91CE4000AC5D49 /* ModuleBViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.mm */; };
 		9FDFA7121A94264E00B9386F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67DE10718A2F55400570519 /* Images.xcassets */; };
-		9FDFA7151A94280D00B9386F /* AudioDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDFA7141A94280D00B9386F /* AudioDataModel.m */; };
 		B65EC5EC18A983270033BE93 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65EC5EB18A983270033BE93 /* GLKit.framework */; };
 		B67DE0F018A2F55400570519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0EF18A2F55400570519 /* Foundation.framework */; };
 		B67DE0F218A2F55400570519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0F118A2F55400570519 /* CoreGraphics.framework */; };
@@ -19,7 +18,6 @@
 		B67DE0FA18A2F55400570519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B67DE0F818A2F55400570519 /* InfoPlist.strings */; };
 		B67DE0FC18A2F55400570519 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B67DE0FB18A2F55400570519 /* main.m */; };
 		B67DE10018A2F55400570519 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B67DE0FF18A2F55400570519 /* AppDelegate.m */; };
-		B67DE10618A2F55400570519 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B67DE10518A2F55400570519 /* ViewController.mm */; };
 		B67DE10F18A2F55400570519 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE10E18A2F55400570519 /* XCTest.framework */; };
 		B67DE11018A2F55400570519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0EF18A2F55400570519 /* Foundation.framework */; };
 		B67DE11118A2F55400570519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B67DE0F318A2F55400570519 /* UIKit.framework */; };
@@ -47,8 +45,6 @@
 		9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModuleAViewController.mm; sourceTree = "<group>"; };
 		9FA70A3C1A91CE4000AC5D49 /* ModuleBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleBViewController.h; sourceTree = "<group>"; };
 		9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModuleBViewController.mm; sourceTree = "<group>"; };
-		9FDFA7131A94280D00B9386F /* AudioDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDataModel.h; sourceTree = "<group>"; };
-		9FDFA7141A94280D00B9386F /* AudioDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDataModel.m; sourceTree = "<group>"; };
 		B65EC5EA18A981A00033BE93 /* SMUGraphHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUGraphHelper.h; sourceTree = "<group>"; };
 		B65EC5EB18A983270033BE93 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B65EC5ED18A992F10033BE93 /* SMUFFTHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMUFFTHelper.h; sourceTree = "<group>"; };
@@ -63,8 +59,6 @@
 		B67DE0FE18A2F55400570519 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B67DE0FF18A2F55400570519 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B67DE10218A2F55400570519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B67DE10418A2F55400570519 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B67DE10518A2F55400570519 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		B67DE10718A2F55400570519 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B67DE10D18A2F55400570519 /* PlayRollingStonesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayRollingStonesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67DE10E18A2F55400570519 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -149,10 +143,6 @@
 				9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.mm */,
 				9FA70A391A91C8D100AC5D49 /* ModuleAViewController.h */,
 				9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */,
-				9FDFA7131A94280D00B9386F /* AudioDataModel.h */,
-				9FDFA7141A94280D00B9386F /* AudioDataModel.m */,
-				B67DE10418A2F55400570519 /* ViewController.h */,
-				B67DE10518A2F55400570519 /* ViewController.mm */,
 				B65EC5EA18A981A00033BE93 /* SMUGraphHelper.h */,
 				B65EC5ED18A992F10033BE93 /* SMUFFTHelper.h */,
 				B67DE10718A2F55400570519 /* Images.xcassets */,
@@ -306,11 +296,9 @@
 			files = (
 				9FA70A3B1A91C8D100AC5D49 /* ModuleAViewController.mm in Sources */,
 				9FA70A3E1A91CE4000AC5D49 /* ModuleBViewController.mm in Sources */,
-				B67DE10618A2F55400570519 /* ViewController.mm in Sources */,
 				B67DE10018A2F55400570519 /* AppDelegate.m in Sources */,
 				B67DE0FC18A2F55400570519 /* main.m in Sources */,
 				B67DE12E18A2F58500570519 /* Novocaine.m in Sources */,
-				9FDFA7151A94280D00B9386F /* AudioDataModel.m in Sources */,
 				B67DE12F18A2F58500570519 /* RingBuffer.mm in Sources */,
 				B67DE12D18A2F58500570519 /* AudioFileWriter.m in Sources */,
 				B67DE12C18A2F58500570519 /* AudioFileReader.mm in Sources */,

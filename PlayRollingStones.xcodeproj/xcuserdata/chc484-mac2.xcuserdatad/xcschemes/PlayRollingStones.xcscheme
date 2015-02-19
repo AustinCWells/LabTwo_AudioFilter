@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B67DE0EB18A2F55400570519"
-               BuildableName = "AudioLab.app"
+               BuildableName = "PlayRollingStones.app"
                BlueprintName = "PlayRollingStones"
                ReferencedContainer = "container:PlayRollingStones.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B67DE0EB18A2F55400570519"
-            BuildableName = "AudioLab.app"
+            BuildableName = "PlayRollingStones.app"
             BlueprintName = "PlayRollingStones"
             ReferencedContainer = "container:PlayRollingStones.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B67DE0EB18A2F55400570519"
-            BuildableName = "AudioLab.app"
+            BuildableName = "PlayRollingStones.app"
             BlueprintName = "PlayRollingStones"
             ReferencedContainer = "container:PlayRollingStones.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B67DE0EB18A2F55400570519"
-            BuildableName = "AudioLab.app"
+            BuildableName = "PlayRollingStones.app"
             BlueprintName = "PlayRollingStones"
             ReferencedContainer = "container:PlayRollingStones.xcodeproj">
          </BuildableReference>
