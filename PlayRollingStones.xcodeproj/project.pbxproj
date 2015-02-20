@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F71E0C31A97C1A9003B3333 /* HighFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F71E0C21A97C1A9003B3333 /* HighFiveViewController.m */; };
 		9FA70A371A91C47300AC5D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67DE10118A2F55400570519 /* Main.storyboard */; };
 		9FA70A3B1A91C8D100AC5D49 /* ModuleAViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */; };
 		9FA70A3E1A91CE4000AC5D49 /* ModuleBViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.mm */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F71E0C11A97C1A9003B3333 /* HighFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighFiveViewController.h; sourceTree = "<group>"; };
+		9F71E0C21A97C1A9003B3333 /* HighFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighFiveViewController.m; sourceTree = "<group>"; };
 		9FA70A391A91C8D100AC5D49 /* ModuleAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleAViewController.h; sourceTree = "<group>"; };
 		9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModuleAViewController.mm; sourceTree = "<group>"; };
 		9FA70A3C1A91CE4000AC5D49 /* ModuleBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleBViewController.h; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				B67DE10118A2F55400570519 /* Main.storyboard */,
 				9FA70A3C1A91CE4000AC5D49 /* ModuleBViewController.h */,
 				9FA70A3D1A91CE4000AC5D49 /* ModuleBViewController.mm */,
+				9F71E0C11A97C1A9003B3333 /* HighFiveViewController.h */,
+				9F71E0C21A97C1A9003B3333 /* HighFiveViewController.m */,
 				9FA70A391A91C8D100AC5D49 /* ModuleAViewController.h */,
 				9FA70A3A1A91C8D100AC5D49 /* ModuleAViewController.mm */,
 				B65EC5EA18A981A00033BE93 /* SMUGraphHelper.h */,
@@ -294,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F71E0C31A97C1A9003B3333 /* HighFiveViewController.m in Sources */,
 				9FA70A3B1A91C8D100AC5D49 /* ModuleAViewController.mm in Sources */,
 				9FA70A3E1A91CE4000AC5D49 /* ModuleBViewController.mm in Sources */,
 				B67DE10018A2F55400570519 /* AppDelegate.m in Sources */,

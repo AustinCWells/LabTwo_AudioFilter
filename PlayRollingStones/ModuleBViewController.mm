@@ -15,31 +15,31 @@
 
 
 #define kBufferLength 4096
+#define kwindowSize 3
+#define kMagnitudeThreshold 1.5
 
 @interface ModuleBViewController ()
 @property (strong, nonatomic) IBOutlet UISlider *slider;
 @property (strong, nonatomic) IBOutlet UILabel *frequency;
 @property (strong, nonatomic) IBOutlet UILabel *gesture;
+@property (weak, nonatomic) IBOutlet UILabel *widthVal;
 @property (nonatomic) GraphHelper *graphHelper;
-@property (nonatomic) float *audioData;
-@property (nonatomic) float *fftMagnitudeBuffer;
-@property (nonatomic) float *fftPhaseBuffer;
+@property (nonatomic) float *audioData, *fftMagnitudeBuffer, *fftWindowedBuffer, *fftPhaseBuffer;
 @property (nonatomic) SMUFFTHelper *fftHelper;
 @property (strong, nonatomic) Novocaine *audioManager;
-@property ( nonatomic) RingBuffer* ringBufferB;
+@property (strong, nonatomic) NSTimer *timer;
+@property (nonatomic) int bandwidth, right, left;;
+@property (nonatomic) NSString *bandwidthShift;
+@property (nonatomic) BOOL changed;
 
+
+-(int)getHighestFrequencyFromBuffer:(float*)fftMagBuffer;
 - (IBAction)sliderChanged:(id)sender;
 @end
 
 @implementation ModuleBViewController
 
--(RingBuffer*)ringBufferB {
-    if(!_ringBufferB){
-        _ringBufferB = new RingBuffer(kBufferLength,2);
-    }
-    
-    return _ringBufferB;
-}
+RingBuffer* ringBufferB;
 
 -(GraphHelper*)graphHelper{
     if(!_graphHelper){
@@ -83,6 +83,13 @@
     return _fftMagnitudeBuffer;
 }
 
+-(float*)fftWindowedBuffer{
+    if(!_fftWindowedBuffer){
+        _fftWindowedBuffer = (float *)calloc(kBufferLength/2,sizeof(float));
+    }
+    return _fftWindowedBuffer;
+}
+
 -(SMUFFTHelper*)fftHelper{
     if(!_fftHelper){
         _fftHelper = new SMUFFTHelper(kBufferLength,kBufferLength,WindowTypeRect);
@@ -109,12 +116,12 @@
     [self.audioManager play];
     [self.audioManager setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
      {
-         self.ringBufferB->AddNewFloatData(data, numFrames);
+         ringBufferB->AddNewFloatData(data, numFrames);
      }];
     
     [self.audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
      {
-            startingFrequency = self.slider.value * 1000.0;
+             startingFrequency = self.slider.value * 1000.0;
              double phaseIncrement1 = 2*M_PI*startingFrequency/samplingRate;
              double sineWavePeriod = 2*M_PI;
              for (int i=0; i < numFrames; ++i)
@@ -128,16 +135,29 @@
              }
               }];
 }
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.frequency.text = @"15.00 kHz";
     self.slider.maximumValue = 20;
     self.slider.minimumValue = 15;
     
-    self.ringBufferB = new RingBuffer(kBufferLength,2);
+    ringBufferB = new RingBuffer(kBufferLength,2);
     
     self.graphHelper->SetBounds(-0.9,0.9,-0.9,0.9); // bottom, top, left, right, full screen==(-1,1,-1,1)
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval: 1
+                                              target: self
+                                            selector: @selector(onTick:)
+                                            userInfo: nil
+                                             repeats: YES];
+}
 
+
+-(void)onTick:(NSTimer *) theTimer
+{
+    self.changed = false;
 }
 
 //  override the GLKViewController update function, from OpenGLES
@@ -147,44 +167,104 @@
     // find maximum frequency per chunck
     // populate the array
     
-    
-    
     // plot the audio
-    self.ringBufferB->FetchFreshData2(self.audioData, kBufferLength, 0, 1);
-    
+   ringBufferB->FetchFreshData2(self.audioData, kBufferLength, 0, 1);
     
     //take the FFT
     self.fftHelper->forward(0,self.audioData, self.fftMagnitudeBuffer, self.fftPhaseBuffer);
+    for(int i = 0; i < kBufferLength/2; i++){
+        if(i < 1400 || i > kBufferLength - 1500){
+            self.fftWindowedBuffer[i] = 0;
+        }else{
+            float maxVal = 0.0;
+            vDSP_maxv(self.fftMagnitudeBuffer+i, 1, &maxVal, kwindowSize);
+            self.fftWindowedBuffer[i] = maxVal;
+        }
+    }
+    
+    
+    self.right= 0;
+    self.left = 0;
+    int maxIndex = (self.slider.value * 1000/(44100.0/4096.0));
+    self.bandwidth = 0;
+    for(int i = maxIndex - 15; i < maxIndex + 15; i++){
+        int mag = self.fftWindowedBuffer[i];
+        
+        if(i < maxIndex - 3 && mag > kMagnitudeThreshold){
+            self.left++;
+        }
+        
+        if(i > maxIndex + 2 && mag > kMagnitudeThreshold){
+            self.right++;
+        }
+        
+        if(mag > kMagnitudeThreshold){
+            self.bandwidth++;
+        }
+    }
+    self.widthVal.text = [NSString stringWithFormat: @"Width: %i", self.bandwidth];
+    
+    NSLog(@"Right: %i, Left: %i", self.right, self.left);
+    
+    self.fftWindowedBuffer[maxIndex] = 10;
+    self.fftWindowedBuffer[maxIndex - 15] = 1.5;
+    self.fftWindowedBuffer[maxIndex + 15] = 1.5;
+    
+    self.widthVal.text = [NSString stringWithFormat: @"Width: %i", self.bandwidth];
+    if(!self.changed){
+        if(self.right > 1){
+            self.gesture.text = @"Gesturing Toward";
+            self.changed = true;
+        }else if(self.left > 1){
+            self.gesture.text = @"Gesturing Away";
+            self.changed = true;
+        }else{
+            self.gesture.text = @"No Gesture";
+        }
+    }
+    
     
     // plot the FFT
-    self.graphHelper->setGraphData(0,self.fftMagnitudeBuffer+1300,kBufferLength/2 - 1400,1); // set graph channel
-    
-
-    
-    
+    //self.graphHelper->setGraphData(0,self.fftMagnitudeBuffer+1300,kBufferLength/2 - 1400,1); // set graph channel
+    self.graphHelper->setGraphData(0,self.fftWindowedBuffer+1400,kBufferLength/2-1500,50); // set graph channel
     self.graphHelper->update(); // update the graph
 }
 
 
 -(void)dealloc{
     
-    self.graphHelper->tearDownGL();
+    //THIS KEEPS CRASHING STUFF??????????
+   /* self.graphHelper->tearDownGL();
     
     free(self.audioData);
     free(self.fftMagnitudeBuffer);
     free(self.fftPhaseBuffer);
-    free(self.ringBufferB);
-    
     free(self.fftHelper);
     free(self.graphHelper);
     
-    self.ringBufferB = nil;
+    delete ringBufferB;
+    
+    ringBufferB = nil;
     self.fftHelper  = nil;
     self.audioManager = nil;
-    self.graphHelper = nil;
+    self.graphHelper = nil;*/
     
     // ARC handles everything else, just clean up what we used c++ for (calloc, malloc, new)
     
+}
+
+-(int)getHighestFrequencyFromBuffer:(float*)fftMagBuffer{
+    int max = 0;
+    int indexOfMax = 0;
+    for(int i = 0; i < kBufferLength; i++){
+        float curMag = fftMagBuffer[i];
+        if(curMag > max){
+            max = fftMagBuffer[i];
+            indexOfMax = i;
+        }
+    }
+    
+    return (int) indexOfMax;
 }
 
 #pragma mark - status bar
